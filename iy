@@ -8721,6 +8721,8 @@ addcmd('pathfindwalkto',{'pathfindfollow'},function(args, speaker)
 				speaker.Character:FindFirstChildOfClass('Humanoid').Sit = false
 				wait(.1)
 			end
+        end
+    end
 			walkto = true
 			repeat wait()
 				local success, response = pcall(function()
@@ -8740,10 +8742,7 @@ addcmd('pathfindwalkto',{'pathfindfollow'},function(args, speaker)
 				if not success then
 					speaker.Character:FindFirstChildOfClass('Humanoid'):MoveTo(getRoot(Players[v].Character).Position)
 				end
-			until Players[v].Character == nil or not getRoot(Players[v].Character) or walkto == false
-		end
-	end
-end)
+            
 
 addcmd('pathfindwalktowaypoint',{'pathfindwalktowp'},function(args, speaker)
 	waypointwalkto = false
