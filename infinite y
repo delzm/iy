@@ -8176,7 +8176,7 @@ addcmd('lookat',{},function(args, speaker)
 		local target = Players[v].Character
 		if target and target:FindFirstChild('Head') then
 			workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.p, target.Head.CFrame.p)
-			wait(0.1)
+			wait()
 		end
 	end
 	speaker.CameraMaxZoomDistance = preMaxZoom
